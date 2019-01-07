@@ -3,7 +3,7 @@
 #############################################################
 
 e2e-tests:
-	echo "$KUBECONFIG"
+	echo "$$KUBECONFIG"
 	kubectl get pods --kubeconfig=`kind get kubeconfig-path`
 	cat `kind get kubeconfig-path`
 	echo "-- cluster info --"
