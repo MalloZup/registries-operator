@@ -5,6 +5,8 @@ language: go
 # Circleci isolated container network so we cannot run kind in circleci.
 #
 # Add all other tests in circleci and use  make e2e-test
+services:
+        - docker
 
 go:
   - '1.11.x'

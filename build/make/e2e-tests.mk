@@ -3,9 +3,9 @@
 #############################################################
 
 e2e-tests:
-	rm -Rf  ~/.kube/*
-	cp `kind get kubeconfig-path --name="1"` ~/.kube/config
-	cat  ~/.kube/config
+	echo $KUBECONFIG
+	kubectl get pods --kubeconfig=$(kind get kubeconfig-path)
+	cat `kind get kubeconfig-path`
 	echo "-- cluster info --"
 	kubectl cluster-info -v5
 	kubectl config view
