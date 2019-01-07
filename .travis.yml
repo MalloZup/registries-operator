@@ -27,7 +27,4 @@ jobs:
         # Create a new Kubernetes cluster using KinD
         - kind create cluster
 
-        # Set KUBECONFIG environment variable
-        - export KUBECONFIG="$(kind get kubeconfig-path)"
-
       script: make e2e-tests
