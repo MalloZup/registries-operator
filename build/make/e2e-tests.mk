@@ -4,7 +4,7 @@
 
 e2e-tests:
 	echo "$KUBECONFIG"
-	kubectl get pods --kubeconfig=$(kind get kubeconfig-path)
+	kubectl get pods --kubeconfig=`kind get kubeconfig-path`
 	cat `kind get kubeconfig-path`
 	echo "-- cluster info --"
 	kubectl cluster-info -v5
