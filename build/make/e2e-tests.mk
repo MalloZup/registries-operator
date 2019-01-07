@@ -2,6 +2,8 @@
 # End To End Tests k8s operator
 #############################################################
 
+KUBECONFIG := $(shell kind get kubeconfig-path || echo "unknown")
+export KUBECONFIG
 e2e-tests:
 	echo "$$KUBECONFIG"
 	kubectl get pods --kubeconfig=`kind get kubeconfig-path`
