@@ -3,6 +3,7 @@
 #############################################################
 
 e2e-tests:
+	rm -Rf  ~/.kube/*
 	cp `kind get kubeconfig-path --name="1"` ~/.kube/config
 	cat  ~/.kube/config
 	echo "-- cluster info --"
