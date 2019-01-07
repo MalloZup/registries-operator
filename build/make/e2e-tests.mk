@@ -3,4 +3,5 @@
 #############################################################
 
 e2e-tests:
-	echo "not yet"
+	echo "deploying operator"
+	kubectl apply -f deployments/registries-operator-full.yaml
